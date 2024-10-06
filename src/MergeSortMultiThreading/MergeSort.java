@@ -30,6 +30,7 @@ public class MergeSort implements Callable<List<Integer>> {
         //Now we merge (concur) the array
         //But we will be using multithreading
 
+
         Future<List<Integer>> leftSortedFuture = ex.submit(new MergeSort(leftHalf, ex));
         Future<List<Integer>> rightSortedFuture = ex.submit(new MergeSort(rightHalf, ex));
 
